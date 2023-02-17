@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Be+Vietnam+Pro:wght@100;300&display=swap');
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    -webkit-background-size: 400% 400%;
+    -moz-background-size: 400% 400%;
+    -o-background-size: 400% 400%;
+    background-size: 400% 400%;
+    animation: change 7s ease-in-out infinite;
+  }
+  
+  @keyframes change {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+}
+
+.App {
+    color: white;
+}
+
+
+/* HOME */
+
+#home {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+#home-text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+h1 {
+    font-size: 100px;
+}
+
+/* END OF HOME */
+
+
+/* NAV */
+
+nav {
+    z-index: 1000;
+    position: fixed;
+    top:0;
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    font-size: 20px;
+}
+
+.topLinks {
+    display:inline;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+li {
+    display: inline;
+}
+
+/* END OF NAV */
+
+/* ABOUT */
+
+#about {
+    height: 100vh;
+}
+
+
+#about-rectangle {
+    display: flex;
+    height: auto;
+    width: 50%;
+    color:black;
+    background-color: white;
+    border-radius:10px;
+    border-width: 1px;
+    border-color: #E73C7E;
+    border-style: solid;
+    display: block;
+    margin: auto;
+    text-align: left;
+}
+
+#about-rectangle>h2 {
+    padding: 20px;
+}
+
+#about-rectangle>p {
+    font-size: 19px;
+    padding: 20px;
+}
+
+#about-rectangle>img {
+    float: right;
+    height: 250px;
+    margin: 20px;
+    border-radius:10px;
+}
+
+/* PROJECTS */
+
+.scrolling-projects {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 630px;
+    margin-top: 50px;
+}
+  
+.projectItem {
+    display: inline-block;
+    margin: 150px 50px 50px 50px;  
+    white-space:pre-wrap;
+    margin-bottom: 50px;
+
+}
+  
+.project-titles {
+    word-wrap: break-word;
+    white-space: wrap;
+    font-size: 20px;
+    /* max-width: 200px; */
+}
+
+.project-descriptions {
+    word-wrap: break-word;
+    white-space: wrap;
+    font-size: 20px;
+    /* max-width: 200px; */
+}
+  
+.project-images {
+    height: 300px;
+    transition: transform .2s;
+    border-radius: 10px;
+}
+
+/* END OF PROJECTS */
