@@ -15,14 +15,11 @@ const Nav = () => {
             <ScrollIntoView className='topLinks' selector="#projects">
                 <li>Projects</li>
             </ScrollIntoView>
-            <ScrollIntoView className='topLinks' selector="#gallery">
-                <li>Gallery</li>
+            <ScrollIntoView className='topLinks' selector="#skills">
+                <li>Skills</li>
             </ScrollIntoView>
             <ScrollIntoView className='topLinks' selector="#contact">
                 <li>Contact</li>
-            </ScrollIntoView>
-            <ScrollIntoView className='topLinks' selector="#reviews">
-                <li>Reviews</li>
             </ScrollIntoView>
         </nav>
     </div>

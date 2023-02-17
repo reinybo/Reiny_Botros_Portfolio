@@ -130,6 +130,9 @@ li {
     margin: 0 10vw 50px 10vw;
     max-width: 80vw;
     vertical-align:top;
+    background-color: rgba(174, 136, 173, 0.17);
+    padding: 10px;
+    border-radius: 15px;
 }
   
 .project-titles {
