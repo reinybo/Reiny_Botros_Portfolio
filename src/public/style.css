@@ -81,7 +81,6 @@ li {
 
 
 #about-rectangle {
-    display: flex;
     height: auto;
     width: 50%;
     color:black;
@@ -113,26 +112,31 @@ li {
 
 /* PROJECTS */
 
+#projects {
+    height: 100vh;
+}
+
 .scrolling-projects {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    height: 630px;
-    margin-top: 50px;
+    height: 90vh;
 }
   
 .projectItem {
     display: inline-block;
-    margin: 150px 50px 50px 50px;  
+    /* margin: 150px 50px 50px 50px;   */
     white-space:pre-wrap;
-    margin-bottom: 50px;
-
+    margin: 0 10vw 50px 10vw;
+    max-width: 80vw;
+    vertical-align:top;
 }
   
 .project-titles {
     word-wrap: break-word;
     white-space: wrap;
-    font-size: 20px;
+    font-size: 30px;
+    margin-top: 0;
     /* max-width: 200px; */
 }
 
@@ -148,5 +152,37 @@ li {
     transition: transform .2s;
     border-radius: 10px;
 }
+
+#projects>h2 {
+    font-size: 3.6rem;
+    text-align: left;
+    /* margin: 0; */
+    /* position: absolute; */
+
+}
+
+.project-tech_used ul {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.project-tech_used li {
+    align-self: center;
+    float:left;
+    text-align:center;
+    display: inline;
+    margin: 0.2em 0.8em 0.5em 0;
+    padding: 0.2em 1em;
+    font-size: 0.9em;
+    color: #ffffff;
+    border: 0 solid rgba(174,136,173,.2);
+    background-color: rgba(174, 136, 173, 0.17);
+    border-radius: 100px;
+}
+
+
+
 
 /* END OF PROJECTS */

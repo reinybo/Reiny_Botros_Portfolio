@@ -20,7 +20,7 @@ const project_data = [
     {
         project_name: "Mercantile",
         image_address:"https://i.ibb.co/ZNw318b/portfolio-project-image-Mercantile.png",
-        project_description: "Mercantile helps you exchange items and services with others in your area! With an emphasis on reciprocity and mutual benefit, Mercantile is not an application for buying or selling items using currency. Instead, users are encouraged to barter whatever they would like to give for whatever they would like to get. With Mercantile, you can...List an item for trade, view items on offer, view a 'Wanted' board, make a trade offer, accept a trade offer",
+        project_description: "Mercantile helps you exchange items and services with others in your area! With an emphasis on reciprocity and mutual benefit, Mercantile is not an application for buying or selling items using currency. Instead, users are encouraged to barter whatever they would like to give for whatever they would like to get. With Mercantile, you can...List an item for trade, view items on offer, view a 'Wanted' board, make a trade offer, and accept a trade offer",
         tech_used:['Node','Express','MongoDB', 'Mongoose', 'Google Firebase', 'React', 'Heroku', 'Netlifly', 'JavaScript', 'HTML', 'CSS', 'RapidAPI'],
         github_link: 'https://github.com/sailor-june/mercantile-frontend.git',
         deploy_link: 'https://m3rcantile.netlify.app/'
@@ -43,18 +43,31 @@ const project_data = [
     }, 
 ]
 
+
+
+
 const Projects = () => {
   return (
     <div id='projects'>
         <br></br>
+        <br></br>
+        <br></br>
+        <h2>Latest Projects</h2>
         <div className='scrolling-projects'>
         {
         project_data.map (content => (
             <div className='projectItem'>
-                <h2 className='project-titles'>{content.project_name}</h2>
+                <h3 className='project-titles'>{content.project_name}</h3>
                 <img className="project-images" src={content.image_address} alt='project_image' />
                 <p className='project-descriptions'>{content.project_description}</p>
-                <br></br><br></br>
+                <h4><a href={content.deploy_link}>Deployed App</a>      <a href={content.github_link}>Github Repo</a></h4>
+                <div className='project-tech_used'>
+                    {content.tech_used.map((tech) => (
+                        <ul>
+                            <li>{tech}</li>
+                        </ul>
+                    ))}
+                </div>
             </div>
         ))
         }
