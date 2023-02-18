@@ -1,4 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import ReactDOM from 'react-dom';
+import ScrollIntoView  from 'react-scroll-into-view'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const project_data = [
     {
@@ -55,8 +59,15 @@ const Projects = () => {
         <h2>Latest Projects</h2>
         <div className='scrolling-projects'>
         {
-        project_data.map (content => (
-            <div className='projectItem'>
+        project_data.map ((content, index) => (
+            <> 
+            { index !== 0? 
+                <ScrollIntoView scrollOptions={{inline:'center', block:'nearest'}} className='topLinks' selector={('#'.concat('index',(index-1)))} >
+                    <FontAwesomeIcon class='projectArrows projectArrowsLeft' size="s" icon={faArrowLeft} />
+                </ScrollIntoView>
+                : '' }
+            <div className='projectItem'  id={('index'.concat((index)))}>
+                <div className={content.project_name} id={content.project_name}>
                 <h3 className='project-titles'>{content.project_name}</h3>
                 <img className="project-images" src={content.image_address} alt='project_image' />
                 <p className='project-descriptions'>{content.project_description}</p>
@@ -68,7 +79,24 @@ const Projects = () => {
                         </ul>
                     ))}
                 </div>
+                </div>
             </div>
+
+            {/* <button type="button" onclick={(document.getElementById(('index'.concat((index+1))))).scrollIntoViewIfNeeded(true)}>Click Me!</button> */}
+            {/* <button type="button" onClick={(document.getElementById(('index'.concat((index+1))))).scrollIntoViewIfNeeded(true)}>Click Me!</button> */}
+
+
+            { index !== project_data.length-1? 
+            // <>
+            //     <button type="button" onClick={(document.getElementById(('index'.concat((index+1))))).scrollIntoView()}>Click Me!</button>
+            //     </>
+            
+            // <FontAwesomeIcon  class='projectArrows projectArrowsRight' onClick={(document.getElementById(('index'.concat((index+1))))).scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})} icon={faArrowRight} /> 
+                <ScrollIntoView scrollOptions={{inline:'center', block:'nearest'}} className='topLinks scrollintoproject' block="center" inline="center" selector={('#'.concat('index',(index+1)))} >
+                    <FontAwesomeIcon  class='projectArrows projectArrowsRight' size="s" icon={faArrowRight} /> 
+                </ScrollIntoView>
+                 : '' }
+            </>
         ))
         }
         </div>
