@@ -4,6 +4,7 @@ import ScrollIntoView  from 'react-scroll-into-view'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
+
 const project_data = [
     {
         project_name: "Diary",
@@ -57,13 +58,13 @@ const Projects = () => {
         <br></br>
         <br></br>
         <h2>Latest Projects</h2>
-        <div className='scrolling-projects'>
+        <div id='scrolling-projects' className='scrolling-projects'>
         {
         project_data.map ((content, index) => (
             <> 
             { index !== 0? 
                 <ScrollIntoView scrollOptions={{inline:'center', block:'nearest'}} className='topLinks' selector={('#'.concat('index',(index-1)))} >
-                    <FontAwesomeIcon class='projectArrows projectArrowsLeft' size="s" icon={faArrowLeft} />
+                    <FontAwesomeIcon className='projectArrows projectArrowsLeft' size="s" icon={faArrowLeft} />
                 </ScrollIntoView>
                 : '' }
             <div className='projectItem'  id={('index'.concat((index)))}>
@@ -93,7 +94,7 @@ const Projects = () => {
             
             // <FontAwesomeIcon  class='projectArrows projectArrowsRight' onClick={(document.getElementById(('index'.concat((index+1))))).scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})} icon={faArrowRight} /> 
                 <ScrollIntoView scrollOptions={{inline:'center', block:'nearest'}} className='topLinks scrollintoproject' block="center" inline="center" selector={('#'.concat('index',(index+1)))} >
-                    <FontAwesomeIcon  class='projectArrows projectArrowsRight' size="s" icon={faArrowRight} /> 
+                    <FontAwesomeIcon  className='projectArrows projectArrowsRight' size="s" icon={faArrowRight} /> 
                 </ScrollIntoView>
                  : '' }
             </>

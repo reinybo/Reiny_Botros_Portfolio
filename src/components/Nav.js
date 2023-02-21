@@ -12,7 +12,7 @@ const Nav = () => {
             <ScrollIntoView className='topLinks' selector="#about">
                 <li>About</li>
             </ScrollIntoView>
-            <ScrollIntoView className='topLinks' selector="#projects">
+            <ScrollIntoView scrollOptions={{inline:'center', block:'center'}} className='topLinks' selector="#projects">
                 <li>Projects</li>
             </ScrollIntoView>
             <ScrollIntoView className='topLinks' selector="#skills">
