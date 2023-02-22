@@ -12,8 +12,17 @@ const Contact = () => {
         </div>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"></link>
-        <i class="devicon-linkedin-plain"></i>
-        <i class="devicon-github-original"></i>
+
+        <div className='contact-links'>
+            <a href="https://www.linkedin.com/in/reiny-botros/">
+                <i class="devicon-linkedin-plain"></i>        
+            </a>
+
+            <a href="https://github.com/reinybo">
+                <i class="devicon-github-original"></i>      
+            </a>
+        </div>
+
 
 
         <ScrollIntoView className='top-scroll' selector="#home">
