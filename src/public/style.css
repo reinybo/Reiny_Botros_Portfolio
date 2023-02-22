@@ -43,8 +43,17 @@ html {
     transform: translateY(-50%);
 }
 
+
+#home h2{
+    margin-left: 15px;
+    padding: 0;
+    float: left;
+}
+
+
 h1 {
     font-size: 100px;
+    margin-left: 15px;
 }
 
 /* END OF HOME */
@@ -66,6 +75,11 @@ nav {
     display:inline;
     margin-left: 15px;
     cursor: pointer;
+
+}
+
+.topLinks:hover {
+    color: #E73C7E;
 }
 
 nav li {
@@ -77,13 +91,13 @@ nav li {
 /* ABOUT */
 
 #about {
-    height: 100vh;
+    height: auto;
 }
 
 
 #about-rectangle {
     height: auto;
-    width: 50%;
+    width: 50vw;
     color:black;
     background-color: white;
     border-radius:10px;
@@ -104,7 +118,7 @@ nav li {
     padding: 20px;
 }
 
-#about-rectangle>img {
+#about-image>img {
     float: right;
     height: 250px;
     margin: 20px;
@@ -114,7 +128,7 @@ nav li {
 /* PROJECTS */
 
 #projects {
-    height: 100vh;
+    height: auto;
     margin-bottom: 100px;
 }
 
@@ -141,7 +155,7 @@ nav li {
     word-wrap: break-word;
     white-space: wrap;
     font-size: 30px;
-    padding-top: 7vh;
+    padding-top: 2vh;
     /* max-width: 200px; */
 }
 
@@ -150,6 +164,7 @@ nav li {
     white-space: wrap;
     font-size: 20px;
     /* max-width: 200px; */
+    margin-bottom: 0;
 }
   
 .project-images {
@@ -180,6 +195,19 @@ nav li {
     border-radius: 100px;
 }
 
+
+.project-links {
+    display: inline;
+    width: 80%;
+    font-size: 20px;
+}
+
+.project-links a {
+    margin: 5px 15px;
+    display: inline-block;
+}
+
+
 .projectArrows {
     height: 20px;
 }
@@ -206,8 +234,6 @@ nav li {
 
 
 #projects>h2 {
-    text-align: left;
-    font-size: 25px;
     margin-bottom: 0;
 }
 
@@ -218,33 +244,130 @@ nav li {
 
 #skills {
     height: auto;
-    /* display: inline; */
 }
 
-.skill-list {
-    /* display: inline; */
-}
-
-
-ul li{
-    /* float: left; */
-    margin: 20px;
-    align-content: center;
-    /* display: inline; */
-
-}
-
-#skills > ul {
-    display: block;
-    list-style-type: none;
-
+#skills h3 {
+    font-size: 25px;
 }
 
 ul > li {
     display: inline-block;
+    margin: 20px;
+    align-content: center;
 }
-
 
 i {
     font-size: 60px;
 }
+
+/* END OF SKILLS */
+
+/* CONTACT */
+
+#contact {
+    margin: 50px;
+}
+
+.email {
+    margin: 50px;
+}
+
+.email a {
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    border: 0.01em solid white;
+    transition: 0.5s ease-in-out;
+}
+
+.email a:hover {
+    color: #E73C7E;
+    background-color: #ffffff;
+}
+
+.top-scroll {
+    margin: 25px
+}
+
+
+a {
+    cursor: pointer;
+}
+
+/* END OF CONTACT */
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 1000px) {
+    #about-rectangle {
+      width: 90%; 
+    }
+
+    .project-images {
+        width: 80%;
+        height: auto;
+    }
+
+    #projects {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #home h2, h1{
+      float: center; 
+      font-size: 10vw;
+    }
+    #home h1{
+        font-size: 15vw;
+      }
+
+    #nav .topLinks {
+        margin-left: 15px;
+        font-size: 5vw;
+    }
+    #about-image {
+        text-align: center;
+        display: block;
+        
+    }
+    #about-image>img {
+        text-align: center;
+        display: block;
+        margin: 0 30vw 5vh 30vw;
+        width: 40vw;
+        height:auto;
+    }
+
+    /* .scrolling-projects {  this would disable the horizontal scroll 
+        overflow-x:hidden;
+        overflow-y: scroll;
+        white-space:normal;
+        height: auto;
+    } */
+
+    /* .projectArrows {
+        display: none;
+    } */
+
+    .project-images {
+        width: 95%;
+        height: auto;
+
+    }
+
+    .project-descriptions {
+        font-size: 17px;
+    }
+
+
+
+  }

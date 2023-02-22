@@ -57,7 +57,7 @@ const Projects = () => {
         <br></br>
         <br></br>
         <br></br>
-        <h2>Latest Projects</h2>
+        <h2 className='title'>Latest Projects</h2>
         <div id='scrolling-projects' className='scrolling-projects'>
         {
         project_data.map ((content, index) => (
@@ -72,7 +72,10 @@ const Projects = () => {
                 <h3 className='project-titles'>{content.project_name}</h3>
                 <img className="project-images" src={content.image_address} alt='project_image' />
                 <p className='project-descriptions'>{content.project_description}</p>
-                <h4><a href={content.deploy_link}>Deployed App</a>      <a href={content.github_link}>Github Repo</a></h4>
+                <div class='project-links'>
+                    <a href={content.deploy_link}>Deployed App</a>      
+                    <a href={content.github_link}>Github Repo</a>
+                </div>
                 <div className='project-tech_used'>
                     {content.tech_used.map((tech) => (
                         <ul>

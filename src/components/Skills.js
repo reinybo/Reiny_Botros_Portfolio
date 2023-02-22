@@ -7,7 +7,7 @@ const Skills = () => {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"></link>
 
 
-        <h2>Skills</h2>
+        <h2 className='title'>Skills</h2>
         <div>
         <h3>Languages: </h3>
         <ul className='skill-lists'>
