@@ -224,13 +224,13 @@ nav li {
     margin-top: 25%;
 }
 
-.Diary {
+/* .Diary {
     margin-left: 10vw;
 }
 
 .Adogtable {
     margin-right: 10vw;
-}
+} */
 
 
 #projects>h2 {
@@ -269,7 +269,8 @@ i {
 }
 
 .email {
-    margin: 50px;
+    align-self: center;
+    margin-bottom: 50px;
 }
 
 .email a {
@@ -292,6 +293,7 @@ i {
 
 a {
     cursor: pointer;
+    color: white;
 }
 
 .contact-links a {
@@ -379,3 +381,4 @@ a {
 
   }
 /* END OF RESPONSIVE */
+
